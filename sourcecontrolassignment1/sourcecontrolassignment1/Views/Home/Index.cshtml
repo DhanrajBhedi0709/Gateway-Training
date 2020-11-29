@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<style>
+    li{
+        margin-bottom: 10px;
+    }
+</style>
+
+@model sourcecontrolassignment1.Models.DetailModel
+<h2>Personal Details</h2>
+@using (Html.BeginForm("PersonalDetails", "Home", FormMethod.Post))
+{
+<ol style="list-style-type: none; ">
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Name)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Name)
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Email)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Password)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.ConfirmPassword)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.ConfirmPassword)
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.BirthDate)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.BirthDate)
+                @Html.ValidationMessageFor(m => m.BirthDate)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Age)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Age)
+                @Html.ValidationMessageFor(m => m.Age)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Address)
+            </div>
+            <div class="col-md-10">
+                @Html.TextAreaFor(m => m.Address)
+                @Html.ValidationMessageFor(m => m.Address)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.MobileNo)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.MobileNo)
+                @Html.ValidationMessageFor(m => m.MobileNo)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.CreditCard)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.CreditCard)
+                @Html.ValidationMessageFor(m => m.CreditCard)
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => m.Linkdin)
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Linkdin)
+                @Html.ValidationMessageFor(m => m.Linkdin)
+            </div>
+        </div>
+    </li>
+</ol>
+    <input type="submit" value="Save Details" />
+}
