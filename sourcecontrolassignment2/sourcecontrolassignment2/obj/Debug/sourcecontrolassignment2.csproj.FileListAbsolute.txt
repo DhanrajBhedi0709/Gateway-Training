@@ -150,3 +150,5 @@ C:\Users\Dhanraj\Documents\GitHub\Gateway-Training\sourcecontrolassignment2\sour
 C:\Users\Dhanraj\Documents\GitHub\Gateway-Training\sourcecontrolassignment2\sourcecontrolassignment2\obj\Debug\sourcecontrolassignment2.csproj.CopyComplete
 C:\Users\Dhanraj\Documents\GitHub\Gateway-Training\sourcecontrolassignment2\sourcecontrolassignment2\obj\Debug\sourcecontrolassignment2.dll
 C:\Users\Dhanraj\Documents\GitHub\Gateway-Training\sourcecontrolassignment2\sourcecontrolassignment2\obj\Debug\sourcecontrolassignment2.pdb
+C:\Users\Dhanraj\Documents\GitHub\Gateway-Training\sourcecontrolassignment2\sourcecontrolassignment2\bin\log4net.dll
+C:\Users\Dhanraj\Documents\GitHub\Gateway-Training\sourcecontrolassignment2\sourcecontrolassignment2\bin\log4net.xml

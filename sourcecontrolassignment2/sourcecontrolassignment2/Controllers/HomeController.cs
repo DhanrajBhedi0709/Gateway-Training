@@ -6,15 +6,22 @@ using System.Web;
 using System.Web.Mvc;
 using sourcecontrolassignment2.Models;
 using System.Security.Cryptography;
+using log4net;
 
 namespace sourcecontrolassignment2.Controllers
 {
     public class HomeController : Controller
     {
+
+        private static readonly ILog Logger = LogManager.GetLogger(System.Environment.MachineName);
+
         private DB_Entities _db = new DB_Entities();
         // GET: Home
         public ActionResult Index()
         {
+            Logger.Info("Testing information log");
+            Logger.Debug("Testing Debug log");
+            Logger.Fatal("Testing Fatal log");
             if (Session["Id"] != null)
             {
                 return View();
@@ -45,6 +52,9 @@ namespace sourcecontrolassignment2.Controllers
                     _db.Configuration.ValidateOnSaveEnabled = false;
                     _db.Users.Add(_user);
                     _db.SaveChanges();
+                    Logger.Info("Testing information log");
+                    Logger.Debug("Testing Debug log");
+                    Logger.Fatal("Testing Fatal log");
                     return RedirectToAction("Index");
                 }
                 else
@@ -79,6 +89,9 @@ namespace sourcecontrolassignment2.Controllers
                     Session["Age"] = data.FirstOrDefault().Age;
                     Session["Phone"] = data.FirstOrDefault().Phone;
                     Session["Id"] = data.FirstOrDefault().Id;
+                    Logger.Info("Testing information log");
+                    Logger.Debug("Testing Debug log");
+                    Logger.Fatal("Testing Fatal log");
                     return RedirectToAction("Index");
                 }
                 else
@@ -95,6 +108,9 @@ namespace sourcecontrolassignment2.Controllers
         public ActionResult Logout()
         {
             Session.Clear();//remove session
+            Logger.Info("Testing information log");
+            Logger.Debug("Testing Debug log");
+            Logger.Fatal("Testing Fatal log");
             return RedirectToAction("Login");
         }
 
