@@ -21,17 +21,11 @@ namespace HMS.WebAPI.Controllers
 
         // GET: api/Hotel
         [BasicAuthentication]
-        public List<Hotel> Get()
+        public IHttpActionResult Get()
         {
             var hotel = _hotelManager.GetAllHotel();
 
-            return hotel; 
-        }
-
-        // GET: api/Hotel/5
-        public string Get(int id)
-        {
-            return "value";
+            return Ok(hotel); 
         }
 
         // POST: api/Hotel
@@ -41,14 +35,5 @@ namespace HMS.WebAPI.Controllers
             return Ok(_hotelManager.CreateHotel(model));
         }
 
-        // PUT: api/Hotel/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Hotel/5
-        public void Delete(int id)
-        {
-        }
     }
 }

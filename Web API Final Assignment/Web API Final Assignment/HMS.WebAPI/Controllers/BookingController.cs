@@ -19,18 +19,6 @@ namespace HMS.WebAPI.Controllers
             _bookingManager = bookingManager;
         }
 
-        // GET: api/Booking
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/Booking/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST: api/Booking
         [BasicAuthentication]
         public IHttpActionResult Post([FromBody]Booking model)

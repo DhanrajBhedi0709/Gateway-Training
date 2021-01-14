@@ -43,15 +43,5 @@ namespace HMS.WebAPI.Controllers
         {
             return Ok(_roomManager.CreateRoom(model));
         }
-
-        // PUT: api/Room/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Room/5
-        public void Delete(int id)
-        {
-        }
     }
 }
