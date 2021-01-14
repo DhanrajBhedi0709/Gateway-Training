@@ -26,3 +26,5 @@ C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.BAL\bin\Debug\Unity.C
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.BAL\bin\Debug\EntityFramework.dll
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.BAL\bin\Debug\HMS.DAL.dll.config
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.BAL\bin\Debug\EntityFramework.xml
+C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.BAL\bin\Debug\AutoMapper.dll
+C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.BAL\bin\Debug\AutoMapper.xml

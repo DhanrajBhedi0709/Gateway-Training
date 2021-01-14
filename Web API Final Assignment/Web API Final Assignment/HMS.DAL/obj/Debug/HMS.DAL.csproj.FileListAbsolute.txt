@@ -12,3 +12,5 @@ C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.DAL\bin\Debug\EntityF
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.DAL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.DAL\bin\Debug\EntityFramework.xml
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.DAL\bin\Debug\AutoMapper.dll
+C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.DAL\bin\Debug\AutoMapper.xml

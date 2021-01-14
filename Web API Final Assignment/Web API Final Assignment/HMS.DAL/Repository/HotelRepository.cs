@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace HMS.DAL.Repository
 {
@@ -23,21 +24,10 @@ namespace HMS.DAL.Repository
             {
                 if (model != null)
                 {
-                    Database.Hotel entity = new Database.Hotel();
+                    Mapper.CreateMap<Hotel, Database.Hotel>();
+                    Database.Hotel entity = Mapper.Map<Database.Hotel>(model);
 
-                    entity.HotelName = model.HotelName;
-                    entity.City = model.City;
-                    entity.Address = model.Address;
-                    entity.Contact = model.Contact;
-                    entity.ContactPerson = model.ContactPerson;
-                    entity.CreatedBy = model.CreatedBy;
                     entity.CreatedDate = DateTime.Now;
-                    entity.Facebook = model.Facebook;
-                    entity.IsActive = model.IsActive;
-                    entity.Pincode = model.Pincode;
-                    entity.Twitter = model.Twitter;
-                    entity.Website = model.Website;
-
                     _dbContext.Hotels.Add(entity);
                     _dbContext.SaveChanges();
 
@@ -58,43 +48,16 @@ namespace HMS.DAL.Repository
 
             if(entities != null)
             {
+                Mapper.CreateMap<Database.Hotel, Hotel>();
                 foreach (var item in entities)
                 {
-                    Hotel hotel = new Hotel();
-
-                    hotel.ID = item.ID;
-                    hotel.HotelName = item.HotelName;
-                    hotel.City = item.City;
-                    hotel.Address = item.Address;
-                    hotel.Contact = item.Contact;
-                    hotel.ContactPerson = item.ContactPerson;
-                    hotel.CreatedBy = item.CreatedBy;
-                    hotel.CreatedDate = item.CreatedDate;
-                    hotel.Facebook = item.Facebook;
-                    hotel.IsActive = item.IsActive;
-                    hotel.Pincode = item.Pincode;
-                    hotel.Twitter = item.Twitter;
-                    hotel.UpdateDate = item.UpdateDate;
-                    hotel.UpdatedBy = item.UpdatedBy;
-                    hotel.Website = item.Website;
+                    Hotel hotel = Mapper.Map<Hotel>(item);
 
                     list.Add(hotel);
                 }
             }
 
             return list;
-        }
-
-        public Hotel GetHotel()
-        {
-            Hotel hotel = new Hotel
-            {
-                ID = 1,
-                HotelName = "Honest",
-                City = "Rajkot"
-            };
-
-            return hotel;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace HMS.DAL.Repository
 {
@@ -23,12 +24,9 @@ namespace HMS.DAL.Repository
             {
                 if (model != null)
                 {
-                    Database.Booking entity = new Database.Booking();
-
-                    entity.RoomID = model.RoomID;
-                    entity.BookingDate = model.BookingDate;
-                    entity.Status = model.Status;
-
+                    Mapper.CreateMap<Booking, Database.Booking>();
+                    Database.Booking entity = Mapper.Map<Database.Booking>(model);
+                    
                     _dbContext.Bookings.Add(entity);
                     _dbContext.SaveChanges();
 

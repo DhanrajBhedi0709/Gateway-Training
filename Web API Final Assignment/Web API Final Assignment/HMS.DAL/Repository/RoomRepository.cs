@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace HMS.DAL.Repository
 {
@@ -23,16 +24,10 @@ namespace HMS.DAL.Repository
             {
                 if (model != null)
                 {
-                    Database.Room entity = new Database.Room();
-
-                    entity.HotelID = model.HotelID;
-                    entity.RoomName = model.RoomName;
-                    entity.RoomCategory = model.RoomCategory;
-                    entity.RoomPrice = model.RoomPrice;
-                    entity.IsActive = model.IsActive;
+                    Mapper.CreateMap<Room, Database.Room>();
+                    Database.Room entity = Mapper.Map<Database.Room>(model);
                     entity.CreatedDate = DateTime.Now;
-                    entity.CreatedBy = model.CreatedBy;
-
+                    
                     _dbContext.Rooms.Add(entity);
                     _dbContext.SaveChanges();
 
@@ -82,20 +77,11 @@ namespace HMS.DAL.Repository
 
                 if (entities != null)
                 {
+                    Mapper.CreateMap<Database.Room, Room>();
+
                     foreach (var item in entities)
                     {
-                        Room room = new Room();
-
-                        room.ID = item.ID;
-                        room.HotelID = (int)item.HotelID;
-                        room.IsActive = item.IsActive;
-                        room.RoomCategory = item.RoomCategory;
-                        room.RoomName = item.RoomName;
-                        room.RoomPrice = (int)item.RoomPrice;
-                        room.UpdateBy = item.UpdateBy;
-                        room.UpdateDate = item.UpdateDate;
-                        room.CreatedBy = item.CreatedBy;
-                        room.CreatedDate = item.CreatedDate;
+                        Room room = Mapper.Map<Room>(item);
                         list.Add(room);
                     }
                 }

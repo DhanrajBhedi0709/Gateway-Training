@@ -10,7 +10,6 @@ namespace HMS.DAL.Repository
 {
     public interface IHotelRepository
     {
-        Hotel GetHotel();
 
         List<Hotel> GetAllHotels();
 

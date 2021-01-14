@@ -102,3 +102,5 @@ C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.WebAPI\bin\HMS.DAL.dl
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.WebAPI\bin\EntityFramework.xml
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.WebAPI\bin\EntityFramework.SqlServer.dll
 C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.WebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.WebAPI\bin\AutoMapper.dll
+C:\Users\Dhanraj\source\repos\Web API Final Assignment\HMS.WebAPI\bin\AutoMapper.xml
